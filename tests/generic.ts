@@ -1,16 +1,4 @@
-[![CI](https://github.com/kt-public/typesafe-property-path/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/kt-public/typesafe-property-path/actions/workflows/ci.yml)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=kt-public_typesafe-property-path&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=kt-public_typesafe-property-path)
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=kt-public_typesafe-property-path&metric=bugs)](https://sonarcloud.io/summary/new_code?id=kt-public_typesafe-property-path)
-[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=kt-public_typesafe-property-path&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=kt-public_typesafe-property-path)
-[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=kt-public_typesafe-property-path&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=kt-public_typesafe-property-path)
-
-# typesafe-property-path
-
-Type-safe property path string
-
-# Usage
-
-```typescript
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { PropertyPaths } from '../src/generic';
 
 type TestType = {
@@ -61,4 +49,14 @@ const test28: PropertyPaths<TestType> = 'prop3[0].prop5.prop6';
 const test29: PropertyPaths<TestType> = 'prop3[0].prop5.prop6[]';
 const test30: PropertyPaths<TestType> = 'prop3[0].prop5.prop6[0]';
 const test31: PropertyPaths<TestType> = 'prop3[0].prop5.prop6[0]';
-```
+
+// @ts-expect-error: Invalid property path
+const test_e1: PropertyPaths<TestType> = ''; // should be error
+// @ts-expect-error: Invalid property path
+const test_e2: PropertyPaths<TestType> = 'prop1.prop2'; // should be error
+// @ts-expect-error: Invalid property path
+const test_e3: PropertyPaths<TestType> = 'prop1[]'; // should be error
+// @ts-expect-error: Invalid property path
+const test_e4: PropertyPaths<TestType> = 'prop1[0]'; // should be error
+// @ts-expect-error: Invalid property path
+const test_e5: PropertyPaths<TestType> = 'propArr.'; // should be error
