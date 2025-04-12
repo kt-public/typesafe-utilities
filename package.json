@@ -1,7 +1,7 @@
 {
   "name": "typesafe-property-path",
   "description": "Type-safe property path string",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "license": "MIT",
   "author": {
     "name": "Konstantin Tarmyshov",
