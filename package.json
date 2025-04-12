@@ -27,8 +27,8 @@
     "prepack": "publint",
     "format": "prettier --write .",
     "lint": "prettier --check . && eslint .",
-    "check": "tsc --project tsconfig-test.json --skipLibCheck",
-    "test": "echo 'No tests for now' && exit 0",
+    "check": "tsc --skipLibCheck",
+    "test": "tsc --project tsconfig-test.json --skipLibCheck",
     "coverage": "echo 'No tests for now' && exit 0",
     "changeset:version": "changeset version && git add --all",
     "changeset:publish": "changeset publish"
