@@ -11,7 +11,7 @@ Type-safe property path string
 # Usage
 
 ```typescript
-import { PropertyPaths } from '../src/generic';
+import { PropertyPaths } from 'typesafe-property-path';
 
 type TestType = {
   prop1: string;
