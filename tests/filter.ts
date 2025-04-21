@@ -48,6 +48,7 @@ type asserts_OmitNever = [
 ];
 
 type TestTypeDeep = {
+  z: 'literal';
   a: string;
   b: number;
   c: boolean;
@@ -65,7 +66,10 @@ type TestTypeDeep = {
 
 type asserts_DeepFilter = [
   Expect<
-    Equal<DeepFilter<TestTypeDeep, string>, { a: string; d: { e: string }; h: { i: string }[] }>
+    Equal<
+      DeepFilter<TestTypeDeep, string>,
+      { z: 'literal'; a: string; d: { e: string }; h: { i: string }[] }
+    >
   >,
   Expect<
     Equal<DeepFilter<TestTypeDeep, number>, { b: number; d: { f: number }; h: { j: number }[] }>
@@ -76,7 +80,13 @@ type asserts_DeepFilter = [
   Expect<
     Equal<
       DeepFilter<TestTypeDeep, string | number>,
-      { a: string; b: number; d: { e: string; f: number }; h: { i: string; j: number }[] }
+      {
+        z: 'literal';
+        a: string;
+        b: number;
+        d: { e: string; f: number };
+        h: { i: string; j: number }[];
+      }
     >
   >,
   Expect<Equal<DeepFilter<TestTypeDeep, unknown>, TestTypeDeep>>
