@@ -1,5 +1,5 @@
 ---
-typesafe-property-path: patch
+typesafe-utilities: patch
 ---
 
 dependabot: update @types/node
