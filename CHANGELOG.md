@@ -1,5 +1,11 @@
 # typesafe-utilities
 
+## 0.2.1
+
+### Patch Changes
+
+- 9772f5b: export filter types
+
 ## 0.2.0
 
 ### Minor Changes
