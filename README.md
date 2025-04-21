@@ -6,7 +6,7 @@
 
 # typesafe-utilities
 
-Type-safe property path string
+Type-safe property path strings
 
 # Usage
 
