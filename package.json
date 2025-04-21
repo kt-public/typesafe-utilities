@@ -1,6 +1,6 @@
 {
-  "name": "typesafe-property-path",
-  "description": "Type-safe property path string",
+  "name": "typesafe-utilities",
+  "description": "Type-safe utilities for working in TypeScript. For example, a type-safe property path type, deep partial type, etc.",
   "version": "0.1.0",
   "license": "MIT",
   "author": {
@@ -14,12 +14,13 @@
     "property",
     "path",
     "string",
-    "property-path"
+    "property-path",
+    "deep partial"
   ],
-  "homepage": "https://github.com/kt-public/typesafe-property-path",
+  "homepage": "https://github.com/kt-public/typesafe-utilities#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kt-public/typesafe-property-path.git"
+    "url": "git+https://github.com/kt-public/typesafe-utilities.git"
   },
   "scripts": {
     "build": "rimraf ./dist && tsc && npm run prepack",
