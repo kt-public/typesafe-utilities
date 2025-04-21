@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { PropertyPaths } from '../src/property-paths';
+import { PropertyPaths } from '../src/paths';
 
 type TestType = {
   prop1: string;
