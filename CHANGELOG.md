@@ -1,5 +1,11 @@
 # typesafe-utilities
 
+## 0.2.0
+
+### Minor Changes
+
+- 914aab2: Add filter, deep filter types
+
 ## 0.1.1
 
 ### Patch Changes
