@@ -1,1 +1,1 @@
-export * from './property-paths.js';
+export * from './paths.js';
