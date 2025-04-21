@@ -1,4 +1,4 @@
-# typesafe-property-path
+# typesafe-utilities
 
 ## 0.1.0
 

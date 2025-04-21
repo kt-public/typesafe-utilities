@@ -1,17 +1,20 @@
-[![CI](https://github.com/kt-public/typesafe-property-path/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/kt-public/typesafe-property-path/actions/workflows/ci.yml)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=kt-public_typesafe-property-path&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=kt-public_typesafe-property-path)
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=kt-public_typesafe-property-path&metric=bugs)](https://sonarcloud.io/summary/new_code?id=kt-public_typesafe-property-path)
-[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=kt-public_typesafe-property-path&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=kt-public_typesafe-property-path)
-[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=kt-public_typesafe-property-path&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=kt-public_typesafe-property-path)
+[![CI](https://github.com/kt-public/typesafe-utilities/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/kt-public/typesafe-utilities/actions/workflows/ci.yml)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=kt-public_typesafe-utilities&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=kt-public_typesafe-utilities)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=kt-public_typesafe-utilities&metric=bugs)](https://sonarcloud.io/summary/new_code?id=kt-public_typesafe-utilities)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=kt-public_typesafe-utilities&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=kt-public_typesafe-utilities)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=kt-public_typesafe-utilities&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=kt-public_typesafe-utilities)
 
-# typesafe-property-path
+# typesafe-utilities
 
 Type-safe property path string
 
 # Usage
 
+## Property paths
+
 ```typescript
-import { PropertyPaths } from 'typesafe-property-path';
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import { PropertyPaths } from '../src/paths';
 
 type TestType = {
   prop1: string;
@@ -31,34 +34,128 @@ type TestType = {
   }[];
 };
 
-const test1: PropertyPaths<TestType> = 'prop1';
-const test2: PropertyPaths<TestType> = 'prop2';
-const test3: PropertyPaths<TestType> = 'propArr';
-const test4: PropertyPaths<TestType> = 'propArr[]';
-const test5: PropertyPaths<TestType> = 'propArr[0]';
-const test6: PropertyPaths<TestType> = 'propArr2.propArr3';
-const test7: PropertyPaths<TestType> = 'propArr2.propArr3[]';
-const test8: PropertyPaths<TestType> = 'propArr2.propArr3[0]';
-const test9: PropertyPaths<TestType> = 'propArr4';
-const test10: PropertyPaths<TestType> = 'propArr4[]';
-const test11: PropertyPaths<TestType> = 'propArr4[0]';
-const test12: PropertyPaths<TestType> = 'propArr4[].propArr5';
-const test13: PropertyPaths<TestType> = 'propArr4[].propArr5[]';
-const test14: PropertyPaths<TestType> = 'propArr4[].propArr5[0]';
-const test15: PropertyPaths<TestType> = 'propArr4[0].propArr5';
-const test16: PropertyPaths<TestType> = 'propArr4[0].propArr5[]';
-const test17: PropertyPaths<TestType> = 'propArr4[0].propArr5[0]';
-const test18: PropertyPaths<TestType> = 'prop3';
-const test19: PropertyPaths<TestType> = 'prop3[]';
-const test21: PropertyPaths<TestType> = 'prop3[].prop4';
-const test22: PropertyPaths<TestType> = 'prop3[].prop5';
-const test23: PropertyPaths<TestType> = 'prop3[].prop5.prop6';
-const test24: PropertyPaths<TestType> = 'prop3[].prop5.prop6[]';
-const test25: PropertyPaths<TestType> = 'prop3[0]';
-const test26: PropertyPaths<TestType> = 'prop3[0].prop4';
-const test27: PropertyPaths<TestType> = 'prop3[0].prop5';
-const test28: PropertyPaths<TestType> = 'prop3[0].prop5.prop6';
-const test29: PropertyPaths<TestType> = 'prop3[0].prop5.prop6[]';
-const test30: PropertyPaths<TestType> = 'prop3[0].prop5.prop6[0]';
-const test31: PropertyPaths<TestType> = 'prop3[0].prop5.prop6[0]';
+type TestTypePropertyPaths = PropertyPaths<TestType>;
+
+const test1: TestTypePropertyPaths = 'prop1';
+const test2: TestTypePropertyPaths = 'prop2';
+const test3: TestTypePropertyPaths = 'propArr';
+const test4: TestTypePropertyPaths = 'propArr[]';
+const test5: TestTypePropertyPaths = 'propArr[0]';
+const test6: TestTypePropertyPaths = 'propArr2.propArr3';
+const test7: TestTypePropertyPaths = 'propArr2.propArr3[]';
+const test8: TestTypePropertyPaths = 'propArr2.propArr3[0]';
+const test9: TestTypePropertyPaths = 'propArr4';
+const test10: TestTypePropertyPaths = 'propArr4[]';
+const test11: TestTypePropertyPaths = 'propArr4[0]';
+const test12: TestTypePropertyPaths = 'propArr4[].propArr5';
+const test13: TestTypePropertyPaths = 'propArr4[].propArr5[]';
+const test14: TestTypePropertyPaths = 'propArr4[].propArr5[0]';
+const test15: TestTypePropertyPaths = 'propArr4[0].propArr5';
+const test16: TestTypePropertyPaths = 'propArr4[0].propArr5[]';
+const test17: TestTypePropertyPaths = 'propArr4[0].propArr5[0]';
+const test18: TestTypePropertyPaths = 'prop3';
+const test19: TestTypePropertyPaths = 'prop3[]';
+const test21: TestTypePropertyPaths = 'prop3[].prop4';
+const test22: TestTypePropertyPaths = 'prop3[].prop5';
+const test23: TestTypePropertyPaths = 'prop3[].prop5.prop6';
+const test24: TestTypePropertyPaths = 'prop3[].prop5.prop6[]';
+const test25: TestTypePropertyPaths = 'prop3[0]';
+const test26: TestTypePropertyPaths = 'prop3[0].prop4';
+const test27: TestTypePropertyPaths = 'prop3[0].prop5';
+const test28: TestTypePropertyPaths = 'prop3[0].prop5.prop6';
+const test29: TestTypePropertyPaths = 'prop3[0].prop5.prop6[]';
+const test30: TestTypePropertyPaths = 'prop3[0].prop5.prop6[0]';
+
+// @ts-expect-error: Invalid property path
+const test_e1: TestTypePropertyPaths = ''; // should be error
+// @ts-expect-error: Invalid property path
+const test_e2: TestTypePropertyPaths = 'prop1.prop2'; // should be error
+// @ts-expect-error: Invalid property path
+const test_e3: TestTypePropertyPaths = 'prop1[]'; // should be error
+// @ts-expect-error: Invalid property path
+const test_e4: TestTypePropertyPaths = 'prop1[0]'; // should be error
+// @ts-expect-error: Invalid property path
+const test_e5: TestTypePropertyPaths = 'propArr.'; // should be error
+```
+
+## Deep partial
+
+```typescript
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import { type DeepPartial } from '../src/partial';
+
+type TestType = {
+  prop1: string;
+  prop2: number;
+  propArr: string[];
+  propArr2: {
+    propArr3: string[];
+  };
+  propArr4: {
+    propArr5: string[];
+  }[];
+  prop3: {
+    prop4: string;
+    prop5: {
+      prop6: string[];
+    };
+  }[];
+};
+
+type TestTypeDeepPartial = DeepPartial<TestType>;
+const test1: TestTypeDeepPartial = {
+  prop1: 'test',
+  prop2: 123
+};
+const test2: TestTypeDeepPartial = {
+  propArr: ['test1', 'test2'],
+  propArr2: {}
+};
+const test3: TestTypeDeepPartial = {
+  propArr2: {
+    propArr3: ['test1', 'test2']
+  }
+};
+const test4: TestTypeDeepPartial = {
+  propArr4: [{}]
+};
+const test5: TestTypeDeepPartial = {
+  propArr4: [
+    {
+      propArr5: ['test1', 'test2']
+    }
+  ]
+};
+const test6: TestTypeDeepPartial = {
+  prop3: [{}]
+};
+const test7: TestTypeDeepPartial = {
+  prop3: [
+    {
+      prop4: 'test',
+      prop5: {}
+    }
+  ]
+};
+const test8: TestTypeDeepPartial = {
+  prop3: [
+    {
+      prop4: 'test',
+      prop5: {
+        prop6: ['test1', 'test2']
+      }
+    }
+  ]
+};
+const test9: TestTypeDeepPartial = {
+  prop3: [
+    {
+      prop4: 'test',
+      prop5: {
+        prop6: ['test1', 'test2']
+      }
+    },
+    {}
+  ]
+};
 ```
