@@ -6,7 +6,7 @@
 
 # typesafe-utilities
 
-Some very specific type-safe utilities that are not available in [type-fest](https://www.npmjs.com/package/type-fest) (this is a very extensive package).
+Some very specific type-safe utilities that are not available in [type-fest (very extensive)](https://www.npmjs.com/package/type-fest).
 
 # Usage
 
@@ -16,7 +16,7 @@ Difference to `type-fest`:
 
 - Array property path can be specified like `prop1[].prop2` (without index)
 - Does not support tuples
-- A little better auto-complete
+- Somewhat better auto-complete for nested arrays of objects
 
 ```typescript
 /* eslint-disable @typescript-eslint/no-unused-vars */
