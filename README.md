@@ -16,6 +16,7 @@ Difference to `type-fest`:
 
 - Array property path can be specified like `prop1[].prop2` (without index)
 - Does not support tuples
+- Supports only `Record<string, unknown>`
 - Somewhat better auto-complete for nested arrays of objects
 
 ```typescript
