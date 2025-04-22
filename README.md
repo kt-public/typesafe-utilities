@@ -6,11 +6,17 @@
 
 # typesafe-utilities
 
-Type-safe property path strings
+Some very specific type-safe utilities that are not available in [type-fest](https://www.npmjs.com/package/type-fest) (this is a very extensive package).
 
 # Usage
 
 ## Property paths
+
+Difference to `type-fest`:
+
+- Array property path can be specified like `prop1[].prop2` (without index)
+- Does not support tuples
+- A little better auto-complete
 
 ```typescript
 /* eslint-disable @typescript-eslint/no-unused-vars */

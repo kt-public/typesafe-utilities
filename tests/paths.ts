@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+import { Paths } from 'type-fest';
 import { PropertyPaths } from '../src/paths';
 
 type TestType = {
@@ -61,3 +62,7 @@ const test_e3: TestTypePropertyPaths = 'prop1[]'; // should be error
 const test_e4: TestTypePropertyPaths = 'prop1[0]'; // should be error
 // @ts-expect-error: Invalid property path
 const test_e5: TestTypePropertyPaths = 'propArr.'; // should be error
+
+// Compare to the type-fest package
+type TestTypeFestPaths = Paths<TestType, { bracketNotation: true }>;
+const testFest1: TestTypeFestPaths = 'prop3[0].prop5.prop6[0]';
