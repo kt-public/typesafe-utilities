@@ -1,5 +1,13 @@
 # typesafe-utilities
 
+## 0.2.2
+
+### Patch Changes
+
+- 00b38ef: Add UnknownStringRecord
+- 7c0a062: dependabot: directory '/', update eslint
+- 7c0a062: dependabot: directory '/', update typescript-eslint
+
 ## 0.2.1
 
 ### Patch Changes
