@@ -24,21 +24,21 @@ Difference to `type-fest`:
 import { PropertyPaths } from '../src/paths';
 
 type TestType = {
-  prop1: string;
-  prop2: number;
-  propArr: string[];
-  propArr2: {
-    propArr3: string[];
-  };
-  propArr4: {
-    propArr5: string[];
-  }[];
-  prop3: {
-    prop4: string;
-    prop5: {
-      prop6: string[];
-    };
-  }[];
+	prop1: string;
+	prop2: number;
+	propArr: string[];
+	propArr2: {
+		propArr3: string[];
+	};
+	propArr4: {
+		propArr5: string[];
+	}[];
+	prop3: {
+		prop4: string;
+		prop5: {
+			prop6: string[];
+		};
+	}[];
 };
 
 type TestTypePropertyPaths = PropertyPaths<TestType>;
@@ -92,78 +92,78 @@ const test_e5: TestTypePropertyPaths = 'propArr.'; // should be error
 import { type DeepPartial } from '../src/partial';
 
 type TestType = {
-  prop1: string;
-  prop2: number;
-  propArr: string[];
-  propArr2: {
-    propArr3: string[];
-  };
-  propArr4: {
-    propArr5: string[];
-  }[];
-  prop3: {
-    prop4: string;
-    prop5: {
-      prop6: string[];
-    };
-  }[];
+	prop1: string;
+	prop2: number;
+	propArr: string[];
+	propArr2: {
+		propArr3: string[];
+	};
+	propArr4: {
+		propArr5: string[];
+	}[];
+	prop3: {
+		prop4: string;
+		prop5: {
+			prop6: string[];
+		};
+	}[];
 };
 
 type TestTypeDeepPartial = DeepPartial<TestType>;
 const test1: TestTypeDeepPartial = {
-  prop1: 'test',
-  prop2: 123
+	prop1: 'test',
+	prop2: 123
 };
 const test2: TestTypeDeepPartial = {
-  propArr: ['test1', 'test2'],
-  propArr2: {}
+	propArr: ['test1', 'test2'],
+	propArr2: {}
 };
 const test3: TestTypeDeepPartial = {
-  propArr2: {
-    propArr3: ['test1', 'test2']
-  }
+	propArr2: {
+		propArr3: ['test1', 'test2']
+	}
 };
 const test4: TestTypeDeepPartial = {
-  propArr4: [{}]
+	propArr4: [{}]
 };
 const test5: TestTypeDeepPartial = {
-  propArr4: [
-    {
-      propArr5: ['test1', 'test2']
-    }
-  ]
+	propArr4: [
+		{
+			propArr5: ['test1', 'test2']
+		}
+	]
 };
 const test6: TestTypeDeepPartial = {
-  prop3: [{}]
+	prop3: [{}]
 };
 const test7: TestTypeDeepPartial = {
-  prop3: [
-    {
-      prop4: 'test',
-      prop5: {}
-    }
-  ]
+	prop3: [
+		{
+			prop4: 'test',
+			prop5: {}
+		}
+	]
 };
 const test8: TestTypeDeepPartial = {
-  prop3: [
-    {
-      prop4: 'test',
-      prop5: {
-        prop6: ['test1', 'test2']
-      }
-    }
-  ]
+	prop3: [
+		{
+			prop4: 'test',
+			prop5: {
+				prop6: ['test1', 'test2']
+			}
+		}
+	]
 };
 const test9: TestTypeDeepPartial = {
-  prop3: [
-    {
-      prop4: 'test',
-      prop5: {
-        prop6: ['test1', 'test2']
-      }
-    },
-    {}
-  ]
+	prop3: [
+		{
+			prop4: 'test',
+			prop5: {
+				prop6: ['test1', 'test2']
+			}
+		},
+		{}
+	]
 };
 ```
 
@@ -172,85 +172,85 @@ const test9: TestTypeDeepPartial = {
 ```typescript
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import {
-  DeepFilter,
-  type FilterInclude,
-  type FilterIncludeKeys,
-  type NonNeverKeys,
-  type OmitNever
+	DeepFilter,
+	type FilterInclude,
+	type FilterIncludeKeys,
+	type NonNeverKeys,
+	type OmitNever
 } from '../src/filter';
 import { type Equal, type Expect } from './helpers';
 
 type TestType = {
-  a: string;
-  b: number;
-  c: boolean;
+	a: string;
+	b: number;
+	c: boolean;
 };
 
 type asserts_FilterKeys = [
-  Expect<Equal<FilterIncludeKeys<TestType, string | number>, 'a' | 'b'>>,
-  Expect<Equal<FilterIncludeKeys<TestType, string>, 'a'>>,
-  Expect<Equal<FilterIncludeKeys<TestType, number>, 'b'>>,
-  Expect<Equal<FilterIncludeKeys<TestType, boolean>, 'c'>>,
-  Expect<Equal<FilterIncludeKeys<TestType, unknown>, 'a' | 'b' | 'c'>>
+	Expect<Equal<FilterIncludeKeys<TestType, string | number>, 'a' | 'b'>>,
+	Expect<Equal<FilterIncludeKeys<TestType, string>, 'a'>>,
+	Expect<Equal<FilterIncludeKeys<TestType, number>, 'b'>>,
+	Expect<Equal<FilterIncludeKeys<TestType, boolean>, 'c'>>,
+	Expect<Equal<FilterIncludeKeys<TestType, unknown>, 'a' | 'b' | 'c'>>
 ];
 
 type asserts_Filter = [
-  Expect<Equal<FilterInclude<TestType, string | number>, { a: string; b: number }>>,
-  Expect<Equal<FilterInclude<TestType, string>, { a: string }>>,
-  Expect<Equal<FilterInclude<TestType, number>, { b: number }>>,
-  Expect<Equal<FilterInclude<TestType, boolean>, { c: boolean }>>,
-  Expect<Equal<FilterInclude<TestType, unknown>, TestType>>
+	Expect<Equal<FilterInclude<TestType, string | number>, { a: string; b: number }>>,
+	Expect<Equal<FilterInclude<TestType, string>, { a: string }>>,
+	Expect<Equal<FilterInclude<TestType, number>, { b: number }>>,
+	Expect<Equal<FilterInclude<TestType, boolean>, { c: boolean }>>,
+	Expect<Equal<FilterInclude<TestType, unknown>, TestType>>
 ];
 
 type TestTypeNever = {
-  a: string;
-  b: number;
-  c: boolean;
-  d: never;
+	a: string;
+	b: number;
+	c: boolean;
+	d: never;
 };
 
 type asserts_NeverKeys = [
-  Expect<Equal<NonNeverKeys<TestType>, 'a' | 'b' | 'c'>>,
-  Expect<Equal<NonNeverKeys<TestTypeNever>, 'a' | 'b' | 'c'>>
+	Expect<Equal<NonNeverKeys<TestType>, 'a' | 'b' | 'c'>>,
+	Expect<Equal<NonNeverKeys<TestTypeNever>, 'a' | 'b' | 'c'>>
 ];
 
 type asserts_OmitNever = [
-  Expect<Equal<OmitNever<TestType>, TestType>>,
-  Expect<Equal<OmitNever<TestTypeNever>, { a: string; b: number; c: boolean }>>
+	Expect<Equal<OmitNever<TestType>, TestType>>,
+	Expect<Equal<OmitNever<TestTypeNever>, { a: string; b: number; c: boolean }>>
 ];
 
 type TestTypeDeep = {
-  a: string;
-  b: number;
-  c: boolean;
-  d: {
-    e: string;
-    f: number;
-    g: boolean;
-  };
-  h: {
-    i: string;
-    j: number;
-    k: boolean;
-  }[];
+	a: string;
+	b: number;
+	c: boolean;
+	d: {
+		e: string;
+		f: number;
+		g: boolean;
+	};
+	h: {
+		i: string;
+		j: number;
+		k: boolean;
+	}[];
 };
 
 type asserts_DeepFilter = [
-  Expect<
-    Equal<DeepFilter<TestTypeDeep, string>, { a: string; d: { e: string }; h: { i: string }[] }>
-  >,
-  Expect<
-    Equal<DeepFilter<TestTypeDeep, number>, { b: number; d: { f: number }; h: { j: number }[] }>
-  >,
-  Expect<
-    Equal<DeepFilter<TestTypeDeep, boolean>, { c: boolean; d: { g: boolean }; h: { k: boolean }[] }>
-  >,
-  Expect<
-    Equal<
-      DeepFilter<TestTypeDeep, string | number>,
-      { a: string; b: number; d: { e: string; f: number }; h: { i: string; j: number }[] }
-    >
-  >,
-  Expect<Equal<DeepFilter<TestTypeDeep, unknown>, TestTypeDeep>>
+	Expect<
+		Equal<DeepFilter<TestTypeDeep, string>, { a: string; d: { e: string }; h: { i: string }[] }>
+	>,
+	Expect<
+		Equal<DeepFilter<TestTypeDeep, number>, { b: number; d: { f: number }; h: { j: number }[] }>
+	>,
+	Expect<
+		Equal<DeepFilter<TestTypeDeep, boolean>, { c: boolean; d: { g: boolean }; h: { k: boolean }[] }>
+	>,
+	Expect<
+		Equal<
+			DeepFilter<TestTypeDeep, string | number>,
+			{ a: string; b: number; d: { e: string; f: number }; h: { i: string; j: number }[] }
+		>
+	>,
+	Expect<Equal<DeepFilter<TestTypeDeep, unknown>, TestTypeDeep>>
 ];
 ```
