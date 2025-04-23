@@ -1,61 +1,63 @@
 {
-  "name": "typesafe-utilities",
-  "description": "Type-safe utilities for working in TypeScript. For example, a type-safe property path type, deep partial type, etc.",
-  "version": "0.2.2",
-  "license": "MIT",
-  "author": {
-    "name": "Konstantin Tarmyshov",
-    "email": "k.tarmyshov@googlemail.com"
-  },
-  "keywords": [
-    "typescript",
-    "type-safe",
-    "typesafe",
-    "property",
-    "path",
-    "string",
-    "property-path",
-    "deep partial"
-  ],
-  "homepage": "https://github.com/kt-public/typesafe-utilities#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kt-public/typesafe-utilities.git"
-  },
-  "scripts": {
-    "build": "rimraf ./dist && tsc && npm run prepack",
-    "prepare": "echo This script is called after 'npm ci' or 'npm install'",
-    "prepack": "publint",
-    "format": "prettier --write .",
-    "lint": "prettier --check . && eslint .",
-    "check": "tsc --skipLibCheck",
-    "test": "tsc --project tsconfig-test.json --skipLibCheck",
-    "coverage": "echo 'No tests for now' && exit 0",
-    "changeset:version": "changeset version && git add --all",
-    "changeset:publish": "changeset publish"
-  },
-  "files": [
-    "dist",
-    "!dist/**/*.test.*",
-    "!dist/**/*.spec.*",
-    "!tests"
-  ],
-  "type": "module",
-  "types": "dist/index.d.ts",
-  "devDependencies": {
-    "@changesets/cli": "^2.28.1",
-    "@eslint/compat": "^1.2.7",
-    "@types/node": "^22.0.0",
-    "eslint": "^9.22.0",
-    "eslint-config-prettier": "^10.1.1",
-    "prettier": "^3.5.3",
-    "publint": "^0.3.9",
-    "rimraf": "^6.0.1",
-    "type-fest": "^4.40.0",
-    "typescript": "^5.8.2",
-    "typescript-eslint": "^8.26.1"
-  },
-  "engines": {
-    "node": ">=20.0.0"
-  }
+	"name": "typesafe-utilities",
+	"description": "Type-safe utilities for working in TypeScript. For example, a type-safe property path type, deep partial type, etc.",
+	"version": "0.2.2",
+	"license": "MIT",
+	"author": {
+		"name": "Konstantin Tarmyshov",
+		"email": "k.tarmyshov@googlemail.com"
+	},
+	"keywords": [
+		"typescript",
+		"type-safe",
+		"typesafe",
+		"property",
+		"path",
+		"string",
+		"property-path",
+		"deep partial"
+	],
+	"homepage": "https://github.com/kt-public/typesafe-utilities#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/kt-public/typesafe-utilities.git"
+	},
+	"scripts": {
+		"build": "rimraf ./dist && tsc && npm run prepack",
+		"build:release": "rimraf ./dist && tsc --project tsconfig-release.json && npm run prepack",
+		"prepare": "echo This script is called after 'npm ci' or 'npm install'",
+		"prepack": "publint",
+		"format": "prettier --write .",
+		"lint": "prettier --check . && eslint .",
+		"check": "tsc --skipLibCheck",
+		"check:test": "tsc --project tsconfig-test.json --skipLibCheck",
+		"test": "npm run check:test",
+		"coverage": "echo 'No tests for now' && exit 0",
+		"changeset:version": "changeset version && git add --all",
+		"changeset:publish": "changeset publish"
+	},
+	"files": [
+		"dist",
+		"!dist/**/*.test.*",
+		"!dist/**/*.spec.*",
+		"!tests"
+	],
+	"type": "module",
+	"types": "dist/index.d.ts",
+	"devDependencies": {
+		"@changesets/cli": "^2.28.1",
+		"@eslint/compat": "^1.2.7",
+		"@types/node": "^22.0.0",
+		"eslint": "^9.22.0",
+		"eslint-config-prettier": "^10.1.1",
+		"prettier": "^3.5.3",
+		"publint": "^0.3.9",
+		"rimraf": "^6.0.1",
+		"type-fest": "^4.40.0",
+		"typescript": "^5.8.2",
+		"typescript-eslint": "^8.26.1"
+	},
+	"engines": {
+		"node": ">=20.0.0"
+	}
 }

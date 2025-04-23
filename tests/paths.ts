@@ -3,21 +3,21 @@ import { Paths } from 'type-fest';
 import { PropertyPaths } from '../src/paths';
 
 type TestType = {
-  prop1: string;
-  prop2: number;
-  propArr: string[];
-  propArr2: {
-    propArr3: string[];
-  };
-  propArr4: {
-    propArr5: string[];
-  }[];
-  prop3: {
-    prop4: string;
-    prop5: {
-      prop6: string[];
-    };
-  }[];
+	prop1: string;
+	prop2: number;
+	propArr: string[];
+	propArr2: {
+		propArr3: string[];
+	};
+	propArr4: {
+		propArr5: string[];
+	}[];
+	prop3: {
+		prop4: string;
+		prop5: {
+			prop6: string[];
+		};
+	}[];
 };
 
 type TestTypePropertyPaths = PropertyPaths<TestType>;
