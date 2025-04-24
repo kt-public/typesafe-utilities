@@ -1,4 +1,4 @@
-# typesafe-utilities
+# @ktarmyshov/typesafe-utilities
 
 ## 0.2.2
 
