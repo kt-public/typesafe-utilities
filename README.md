@@ -1,8 +1,8 @@
-[![CI](https://github.com/kt-public/typesafe-utilities/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/kt-public/typesafe-utilities/actions/workflows/ci.yml)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=kt-public_typesafe-utilities&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=kt-public_typesafe-utilities)
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=kt-public_typesafe-utilities&metric=bugs)](https://sonarcloud.io/summary/new_code?id=kt-public_typesafe-utilities)
-[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=kt-public_typesafe-utilities&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=kt-public_typesafe-utilities)
-[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=kt-public_typesafe-utilities&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=kt-public_typesafe-utilities)
+[![CI](https://github.com/kt-npm-modules/typesafe-utilities/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/kt-npm-modules/typesafe-utilities/actions/workflows/ci.yml)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=kt-npm-modules_typesafe-utilities&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=kt-npm-modules_typesafe-utilities)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=kt-npm-modules_typesafe-utilities&metric=bugs)](https://sonarcloud.io/summary/new_code?id=kt-npm-modules_typesafe-utilities)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=kt-npm-modules_typesafe-utilities&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=kt-npm-modules_typesafe-utilities)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=kt-npm-modules_typesafe-utilities&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=kt-npm-modules_typesafe-utilities)
 
 # typesafe-utilities
 

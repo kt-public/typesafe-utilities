@@ -17,10 +17,10 @@
 		"property-path",
 		"deep partial"
 	],
-	"homepage": "https://github.com/kt-public/typesafe-utilities#readme",
+	"homepage": "https://github.com/kt-npm-modules/typesafe-utilities#readme",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/kt-public/typesafe-utilities.git"
+		"url": "git+https://github.com/kt-npm-modules/typesafe-utilities.git"
 	},
 	"scripts": {
 		"build": "rimraf ./dist && tsc && npm run prepack",
