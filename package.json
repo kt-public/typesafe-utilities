@@ -22,6 +22,9 @@
 		"type": "git",
 		"url": "git+https://github.com/kt-npm-modules/typesafe-utilities.git"
 	},
+	"bugs": {
+		"url": "https://github.com/kt-npm-modules/typesafe-utilities/issues"
+	},
 	"scripts": {
 		"build": "rimraf ./dist && tsc && npm run prepack",
 		"build:release": "rimraf ./dist && tsc --project tsconfig-release.json && npm run prepack",
