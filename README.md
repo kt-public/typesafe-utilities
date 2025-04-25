@@ -1,3 +1,4 @@
+[![NPM Version](https://img.shields.io/npm/v/%40ktarmyshov%2Ftypesafe-utilities)](https://www.npmjs.com/package/@ktarmyshov/typesafe-utilities)
 [![CI](https://github.com/kt-npm-modules/typesafe-utilities/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/kt-npm-modules/typesafe-utilities/actions/workflows/ci.yml)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=kt-npm-modules_typesafe-utilities&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=kt-npm-modules_typesafe-utilities)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=kt-npm-modules_typesafe-utilities&metric=bugs)](https://sonarcloud.io/summary/new_code?id=kt-npm-modules_typesafe-utilities)
