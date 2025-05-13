@@ -4,6 +4,7 @@
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=kt-npm-modules_typesafe-utilities&metric=bugs)](https://sonarcloud.io/summary/new_code?id=kt-npm-modules_typesafe-utilities)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=kt-npm-modules_typesafe-utilities&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=kt-npm-modules_typesafe-utilities)
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=kt-npm-modules_typesafe-utilities&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=kt-npm-modules_typesafe-utilities)
+[![Socket Badge](https://socket.dev/api/badge/npm/package/@ktarmyshov/typesafe-utilities)](https://socket.dev/npm/package/@ktarmyshov/typesafe-utilities/overview)
 
 # typesafe-utilities
 
