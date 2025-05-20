@@ -28,7 +28,6 @@
 	"scripts": {
 		"build": "rimraf ./dist && tsc && npm run prepack",
 		"build:release": "rimraf ./dist && tsc --project tsconfig-release.json && npm run prepack",
-		"prepare": "echo This script is called after 'npm ci' or 'npm install'",
 		"prepack": "publint",
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint .",
