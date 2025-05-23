@@ -1,10 +1,10 @@
-type DeepPartialImpl<T> =
+type PartialDeepImpl<T> =
 	T extends Record<string, unknown>
 		? {
-				[K in keyof T]?: DeepPartialImpl<T[K]>;
+				[K in keyof T]?: PartialDeepImpl<T[K]>;
 			}
 		: T extends (infer U)[]
-			? DeepPartialImpl<U>[]
+			? PartialDeepImpl<U>[]
 			: T;
 
-export type DeepPartial<T extends Record<string, unknown>> = DeepPartialImpl<T>;
+export type PartialDeep<T extends Record<string, unknown>> = PartialDeepImpl<T>;
