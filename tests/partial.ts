@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { type DeepPartial } from '../src/partial';
+import { type PartialDeep } from '../src/partial';
 
 type TestType = {
 	prop1: string;
@@ -19,7 +19,7 @@ type TestType = {
 	}[];
 };
 
-type TestTypeDeepPartial = DeepPartial<TestType>;
+type TestTypeDeepPartial = PartialDeep<TestType>;
 const test1: TestTypeDeepPartial = {
 	prop1: 'test',
 	prop2: 123
